@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>End-points</title>
+    <link rel="stylesheet" th:href="@{/css/endpoints-style.css}" href="../../static/css/endpoints-style.css">
+</head>
+<body>
+<header>
+    <div>
+        <h1 class="page-title">Project functionality</h1>
+    </div>
+    <nav class="navigation">
+        <a href="/index">Home</a>
+        <a href="/launch">How to launch</a>
+        <a href="/technologies">Technologies</a>
+        <a href="/endpoints">End-Points</a>
+    </nav>
+</header>
+<main>
+    <div>
+        <h2>Project end-points:</h2>
+        <ul>
+            <li>Login page. (HttpMethod.Get, HttpMethod.POST, "/login") for unauthenticated users</li>
+            <li>Home page. (HttpMethod.GET, "/index" or "/") for any role</li>
+            <li>Launch page. (HttpMethod.GET, "/launch") for any role</li>
+            <li>Technologies page. (HttpMethod.GET, "/launch") for any role</li>
+            <li>Functionality page. (HttpMethod.GET, "/endpoints") for any role</li>
+        </ul>
+        <h2 class="postman-title">Next use with Postman:</h2>
+        <ul>
+            <li>Get all users. (HttpMethod.GET, "/users") for admin role</li>
+            <li>Get user by id. (HttpMethod.GET, "/users/{id}") for admin role</li>
+            <li>Create user. (HttpMethod.POST, "/users") for admin role</li>
+            <li>Update user by id. (HttpMethod.PUT, "/users/{id}") for admin role</li>
+            <li>Delete user by id. (HttpMethod.DELETE, "/users/{id}") for admin role</li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

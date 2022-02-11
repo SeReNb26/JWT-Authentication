@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Launching</title>
+    <link rel="stylesheet" th:href="@{/css/launch-style.css}" href="../../static/css/launch-style.css">
+</head>
+<body>
+<header>
+    <div>
+        <h1 class="page-title">Launching</h1>
+    </div>
+    <nav class="navigation">
+        <a href="/index">Home</a>
+        <a href="/launch">How to launch</a>
+        <a href="/technologies">Technologies</a>
+        <a href="/endpoints">End-Points</a>
+    </nav>
+</header>
+<main>
+    <div>
+        <h2>Instructions for launching</h2>
+        <ol>
+            <li>Download this project locally and open it in your IDE.</li>
+            <li>Install MySQL and create a jwt_project schema in it.</li>
+            <li>Go to "application.properties" file and change login and password to your own</li>
+            <li>Run the program</li>
+            <li>Go to http://localhost:8080 and use any account from ROLES article to login</li>
+        </ol>
+    </div>
+</main>
+</body>
+</html>

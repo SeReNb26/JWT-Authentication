@@ -40,7 +40,7 @@ public class JWTTokenAuthenticationFilter extends OncePerRequestFilter {
             JWTToken = tokenUtil.generateToken(userDetailsService.loadUserByUsername(login));
             response.setHeader("Set-Cookie", "token=" + JWTToken + "; " +
                     "SameSite=Strict; " +
-                    "Secure; " +
+//                    "Secure; " + //if u use postman, disable secure flag
                     "HttpOnly; " +
                     "Max-Age=" + 60 * 60 * 24 * 30);
         }

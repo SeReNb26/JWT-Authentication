@@ -1,22 +1,11 @@
-package com.example.jwtauthentication.model;
+package com.example.jwtauthentication.dto.response;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import com.example.jwtauthentication.model.Role;
 
-@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserResponseDto {
     private Long id;
     private String name;
     private String login;
-    private String password;
-    @ManyToOne
     private Role role;
 
     public Long getId() {
@@ -41,14 +30,6 @@ public class User {
 
     public void setLogin(String login) {
         this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Role getRole() {

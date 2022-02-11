@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/index-style.css}" href="../../static/css/index-style.css">
+</head>
+<body>
+<header>
+    <div>
+        <h1 class="page-title">Welcome to the website!</h1>
+        <p class="page-subtitle">
+            This is a <span class="page-subtitle__first-span">simple</span> site
+            with <span class="page-subtitle__second-span">JWT token authentication</span>.
+        </p>
+    </div>
+    <nav class="navigation">
+        <a href="/index">Home</a>
+        <a href="/launch">How to launch</a>
+        <a href="/technologies">Technologies</a>
+        <a href="/endpoints">End-Points</a>
+    </nav>
+</header>
+<main>
+    <div>
+        <h2>Project's Architecture</h2>
+        <p>
+            The project is based on three-layers architecture and respect SOLID principles.
+        </p>
+        <ul>
+            <li>
+                <h3>Repository(DAO) layer</h3>
+                <p>
+                    This layer of the program is only responsible for selecting data from the database and should not
+                    depend on other layers.
+                </p>
+            </li>
+            <li>
+                <h3>Service layer</h3>
+                <p>
+                    The service layer is responsible for executing the entire business logic of the project. Uses the
+                    dependencies of the DAO layer.
+                </p>
+            </li>
+            <li>
+                <h3>Controller layer</h3>
+                <p>
+                    This layer is responsible for handling HTTP requests from the user. It uses the service layer
+                    dependencies.
+                </p>
+            </li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>
