@@ -6,4 +6,5 @@ import com.example.jwtauthentication.model.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
+    Role getByName(String name);
 }

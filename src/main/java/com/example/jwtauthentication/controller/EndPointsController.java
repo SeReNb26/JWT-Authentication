@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping({"/", "/index"})
-public class IndexController {
+@RequestMapping("/endpoints")
+public class EndPointsController {
 
     @GetMapping
-    public String getIndexPage() {
-        return "navigation/index";
+    public String endPoints() {
+        return "navigation/endpoints";
     }
 }

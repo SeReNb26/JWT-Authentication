@@ -2,6 +2,7 @@ package com.example.jwtauthentication.service.impl;
 
 import static org.springframework.security.core.userdetails.User.withUsername;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,7 @@ import com.example.jwtauthentication.model.User;
 import com.example.jwtauthentication.service.UserService;
 
 @Service
+@Primary
 public class UserDetailsServiceImpl implements UserDetailsService {
     private static final User EMPTY_USER = createEmptyUser();
     private final UserService userService;
